@@ -1,0 +1,22 @@
+<%= form_with(model: tweeter, local: true) do |form| %>
+  <% if tweeter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tweeter.errors.count, "error") %> prohibited this tweeter from being saved:</h2>
+      <ul>
+      <% tweeter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="card text-center" style="width:500px;margin-left:425px;">
+  <div class="card-header">
+  <div class="form-group">
+    <%= form.label :content,class:"exampleFormControlTextarea1" %>
+    <%= form.text_area :content, id: :tweeter_content,class:"form-control",id:"exampleFormControlTextarea1",class:"textarea" %>
+  </div>
+    <%= form.submit class:"btn btn-primary"%>
+    <%= link_to 'Back', tweeters_path,class:"btn btn-danger" %>
+  </div>
+  </div>
+<% end %>

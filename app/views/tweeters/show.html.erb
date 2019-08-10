@@ -1,0 +1,13 @@
+<div class="alert alert-success" role="alert" style="text-align:center;">
+<%= notice %>
+</div>
+<div class="card text-center" style="width:500px;margin-left:425px;">
+<div class="card-header">
+  <strong>Content:</strong><br>
+  <%= @tweeter.content %><br>
+  <%= link_to 'Edit', edit_tweeter_path(@tweeter),class:"btn btn-primary" %>
+  <%= link_to 'Back', tweeters_path,class:"btn btn-danger" %>
+</div>
+</div>
+</p>
+
